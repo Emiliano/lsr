@@ -32,7 +32,7 @@
         const map = new window.mapboxgl.Map({
             container: "cmap_container",
             center: [-8.60888, 41.13717],
-            zoom: 10,
+            zoom: 100,
             style: 'mapbox://styles/mapbox/streets-v8',
         });
 
@@ -40,17 +40,17 @@
     <script src="https://scripts.avuxi.com/travel/map-layers/latest/map-layers-for-mapbox.js"></script>
     <script>
         const options = {
-            buttonOrientation: 'horizontal',
+            buttonOrientation: 'vertical',
             buttonBackgroundColor: 'white',
             buttonForegroundColor: 'black',
             buttonLocation: 'tr',
             showLegend: true,
             language: 'en',
             showMetro: true,
-            defaultCategory: 'eating',
+            defaultCategory: 'sightseeing',
             initialZoom: undefined,
             initialLocation: undefined,
-            opacity: 50
+            opacity: 10
         }
         AVUXI.mapStart(map, window.mapboxgl,'68c96919-adda-4bcf-9fa8-b87af07f090d', options);
     </script>
