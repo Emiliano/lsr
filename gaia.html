@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Busyness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel='stylesheet' />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js"></script>
+
+    <style>
+        #cmap_container {
+            position: fixed !important;
+            overflow: hidden !important;
+            top: 15px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 4px;
+            border: 5px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cmap_container"></div>
+    <script>
+        
+        window.mapboxgl.accessToken = "pk.eyJ1IjoibHNyZGUiLCJhIjoiY2x3OWVkemx2MDAyYTJqcGE0N3EyZzUxcCJ9.nTT3ANBsprhcr88AyLIkKQ";
+
+        const map = new window.mapboxgl.Map({
+            container: "cmap_container",
+            center: [41.137300, -8.608794],
+            zoom: 10,
+            style: 'mapbox://styles/mapbox/streets-v8',
+        });
+
+    </script>
+    <script src="https://scripts.avuxi.com/travel/map-layers/latest/map-layers-for-mapbox.js"></script>
+    <script>
+        const options = {
+            buttonOrientation: 'horizontal',
+            buttonBackgroundColor: 'white',
+            buttonForegroundColor: 'black',
+            buttonLocation: 'tr',
+            showLegend: true,
+            language: 'en',
+            showMetro: true,
+            defaultCategory: 'eating',
+            initialZoom: undefined,
+            initialLocation: undefined,
+            opacity: 50
+        }
+        AVUXI.mapStart(map, window.mapboxgl,'68c96919-adda-4bcf-9fa8-b87af07f090d', options);
+    </script>
+</body>
+
+</html>
